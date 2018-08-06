@@ -133,7 +133,7 @@ There Are 4 Rounds To Win Searock<br>
 
 <div class="check">
 
-    <input type="checkbox"  name="terms" id="terms" onchange="activateButton(this)">  I Agree Terms with the Terms and Conditions
+    <input type="checkbox"  name="terms" id="terms" onchange="activateButton(this) onclick="changed()" required">  I Agree Terms with the Terms and Conditions
 
 <br><br>
 
@@ -217,6 +217,17 @@ There Are 4 Rounds To Win Searock<br>
 			$().UItoTop({ easingType: 'easeOutQuart' });
 			
 		});
+  function changed(){
+
+ 
+    if ( document.getElementById("terms").checked==true ) {
+        document.getElementById("submit").removeAttribute("disabled");
+    } else {
+        document.getElementById("terms").checked==false
+    }
+ 
+
+}
 	</script> 
 	<!-- //smooth-scrolling-of-move-up -->
 	<!-- Bootstrap core JavaScript
