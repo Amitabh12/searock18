@@ -221,9 +221,9 @@ There Are 4 Rounds To Win Searock<br>
 
  
     if ( document.getElementById("terms").checked==true ) {
-        document.getElementById("submit").removeAttribute("disabled");
-    } else {
-        document.getElementById("terms").checked==false
+        document.getElementById("submit").disabled=false;
+    } else if( document.getElementById("terms").checked==false) {
+        document.getElementById("submit").disabled=true;
     }
  
 
